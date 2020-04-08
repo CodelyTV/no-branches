@@ -1,0 +1,15 @@
+name: 'No Branches'
+description: 'Automatically remove any branch'
+branding:
+  icon: 'alert-triangle'
+  color: 'red'
+inputs:
+  GITHUB_TOKEN:
+    description: 'GitHub token'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.GITHUB_TOKEN }}
+
